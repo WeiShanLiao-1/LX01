@@ -56,8 +56,8 @@ ImgAlt nvarchar(50) not null
 ALTER TABLE WorkInfo
 ADD FOREIGN KEY(UserName) REFERENCES UserInfo(UserName);
 ALTER TABLE Comment
-ADD FOREIGN KEY(CommentID) REFERENCES WorkInfo(UserName);
+ADD FOREIGN KEY(UserName) REFERENCES WorkInfo(UserName);
 ALTER TABLE Comment
-ADD FOREIGN KEY(CommentID) REFERENCES UserInfo(UserName);
+ADD FOREIGN KEY(UserName) REFERENCES UserInfo(UserName);
 ALTER TABLE Acitvity
-ADD FOREIGN KEY(AcitvityID) REFERENCES UserInfo(UserName);
+ADD FOREIGN KEY(UserName) REFERENCES UserInfo(UserName);
