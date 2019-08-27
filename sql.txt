@@ -19,7 +19,7 @@ EndTime datetime(8) not null,
 AcitvityPicture nvarchar(250) not null,
 AcitvityIntroduction nvarchar(8000),
 Summary nvarchar(250),
-AcitvityVerify nchar(10) not null DEFAULT '´ýÉóºË',
+AcitvityVerify nchar(10) not null DEFAULT 'Â´Ã½Ã‰Ã³ÂºÃ‹',
 AcitvityStatus nchar(10),
 UserName nvarchar(50) not null
 );
@@ -55,3 +55,9 @@ ImgAlt nvarchar(50) not null
 );
 ALTER TABLE WorkInfo
 ADD FOREIGN KEY(UserName) REFERENCES UserInfo(UserName);
+ALTER TABLE Comment
+ADD FOREIGN KEY(CommentID) REFERENCES WorkInfo(UserName);
+ALTER TABLE Comment
+ADD FOREIGN KEY(CommentID) REFERENCES UserInfo(UserName);
+ALTER TABLE Acitvity
+ADD FOREIGN KEY(AcitvityID) REFERENCES UserInfo(UserName);
